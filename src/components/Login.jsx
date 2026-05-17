@@ -17,7 +17,7 @@ const Login = ({ setUser }) => {
 
     try {
       const res = await fetch(
-        `http://localhost:5000/api/auth/${isSignup ? "signup" : "login"}`,
+        `${import.meta.env.VITE_API_URL}/api/auth/${isSignup ? "signup" : "login"}`,
         {
           method: "POST",
           headers: {
