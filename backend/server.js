@@ -66,20 +66,20 @@ socket.on("sendMessage", async (msg) => {
   if (!user) return;
 
   try {
-    const messageData = {
-      id: Date.now(),
-      user: user.username,
-      room: user.room,
+const messageData = {
+  id: Date.now(),
+  user: user.username,
+  room: user.room,
 
-      text: typeof msg === "string" ? msg : null,
-      file: msg.file || null,
-      fileName: msg.fileName || null,
-      fileType: msg.fileType || null,
-      audio: msg.audio || null,
+  text: msg.text || null,
+  file: msg.file || null,
+  fileName: msg.fileName || null,
+  fileType: msg.fileType || null,
+  audio: msg.audio || null,
 
-      time: new Date(),
-      read: false,
-    };
+  time: new Date(),
+  read: false,
+};
 
     // 💾 Save in DB
     await Message.create(messageData);
