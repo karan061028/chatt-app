@@ -47,9 +47,9 @@ const Login = ({ setUser }) => {
   };
 
   // GOOGLE LOGIN PLACEHOLDER
-  const handleGoogleLogin = () => {
-    alert("Google OAuth will be added after deployment 🚀");
-  };
+ const handleGoogleLogin = () => {
+  alert("Google authentication will be available soon ✨");
+};
 
   return (
     <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[#020617]">
